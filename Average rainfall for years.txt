@@ -1,0 +1,9 @@
+months = int(input("How Many months did it rain?")
+for months in range (Months)
+	print('rainfall' , month 1)
+	total = 0
+	for rainfall in range (1,12):
+		print ( 'avg_rain', rainfall)
+		rainfall = int(input("How much in each month did it rain?" ))
+		total += rainfall
+	print(' The average rainfall for month', month +1 'is:', total/5)
