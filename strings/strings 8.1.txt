@@ -1,0 +1,11 @@
+def main():
+first = input('Please enter your first name: ')
+middle = input('Please enter your middle name: ')
+name = first, middle, last
+first_split = first.split()
+middle_split = middle.split()
+last_split = last.split()
+first_list = first_split[0][0]
+middle_list = middle_split[0][0]
+last_list = last_split[0][0]
+print(name, "=", first_list.upper(), '.', middle_list.upper(), '.', last_list.upper())
