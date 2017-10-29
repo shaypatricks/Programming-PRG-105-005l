@@ -1,0 +1,42 @@
+def main():
+    # create two empty lists
+    name_g = []
+    name_b = []
+
+    # start with opening both files
+    pop_girls = open('GirlNames.txt', 'r')
+    pop_boys = open('BoyNames.txt', 'r')
+
+    # get user input
+    user_check = input('Please enter a name: ')
+
+    # read the names from pop_girls and pop_boys into the respective lists, name_g and name_b
+    name_g = pop_girls.readlines()
+    name_b = pop_boys.readlines()
+
+
+    # create an index variable and while loop to strip the '\n' off each name
+    index = 0
+    while index < len(name_g):
+        name_g[index] = name_g[index].rstrip('\n')
+        index += 1
+
+    # reset index to 0 strip '\n' off boys names
+    index = 0
+    while index < len(name_b):
+        name_b[index] = name_b[index].rstrip('\n')
+        index += 1
+
+    # close the files
+    pop_girls.close()
+    pop_boys.close()
+
+    # Lists can be checked using if statements and do not require loops to check each individual entry.
+    if user_check in name_g:
+        print('Popular Girls name.')
+    elif user_check in name_b:
+        print("Popular Boy name.")
+    else:
+        print("Not a popular name.")
+
+main()
