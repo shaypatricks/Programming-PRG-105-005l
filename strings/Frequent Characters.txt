@@ -1,0 +1,8 @@
+user_input = input('Please enter a string: ')
+user_input = user_input.rstrip(" ")
+dictionary = ()
+for letters in user_input.lower():
+dictionary[letters] = 0
+for letters in user_input.lower():
+dictionary[letters] += 1
+dictionary = sorted(dictionary.item
