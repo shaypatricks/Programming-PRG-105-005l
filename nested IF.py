@@ -17,13 +17,17 @@ if bill == "A" or bill == "a" or bill == "B" or bill == "b" or bill == "C" or bi
     minutes = int(input("How many minutes did you use this month? "))
 
     if bill == "A" or bill == "a":
-            if minutes > 450:
+            if minutes >= 450:
                 price = 39.99 + (minutes - 450) * .45
                 print("you owe $" + format(price, ",.2f"))
+            else:
+                print('You owe $ 39.99! ')
     elif bill == "B" or bill == "b":
-            if minutes > 900:
+            if minutes >= 900:
                 price = 59.99 + (minutes - 900) * .40
                 print("You owe $" + format(price, ",.2f"))
+            else:
+                print('you owe 59.99!')
     else:
         print("You have unlimited minutes you owe $69.99!")
 else:
