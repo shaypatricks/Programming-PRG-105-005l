@@ -1,3 +1,4 @@
+# Create the class so the quizzes work
 class Questions:
     def __init__(self, question, a1, a2, a3, a4, answer):
         self.__question = question
@@ -43,8 +44,9 @@ class Questions:
     def get_answer(self):
         return self.__answer
 
-
+# Now Lets Start the game
 def main():
+    print('Oh Goody two new mortals are here to play a new game, you know i love games as much as i love CHEESE!')
     q0 = Questions('Who was the man that conquered all of tameriel?',
             'a: Tiber Septim',
             'b: Reymond Cyrodiil',
@@ -108,14 +110,16 @@ def main():
                   'c: The Slave Rebbellion',
                   'd: the oblivion crisis',
                   'a')
-
+    # Make Counter for Player and get their names
+    player1 = input('Whats your name first mortal: ')
     player_1 = 0
+    player2 = input('And you other mortal you know what im gonna ask: ')
     player_2 = 0
-
+    # Put questions in set since its easier
     set_1 = [q1, q3, q5, q7, q9]
     set_2 = [q0, q2, q4, q6, q8]
-
-    print('PLayer_1: ')
+    # time to have fun and go through my quiz
+    print(player1)
     for quest in set_1:
         print('\n')
         print(quest.get_question())
@@ -130,9 +134,9 @@ def main():
         else:
             print('WRONG!!, now to punish you puny mortal.')
             player_1 -= 1
-    print('You Player_1 Earned: ' + str(player_1), 'points')
+    print('You', player1,  'Earned: ' + str(player_1), 'points')
 
-    print('PLayer_2: ')
+    print(player2)
     for quest in set_2:
         print('\n')
         print(quest.get_question())
@@ -147,15 +151,19 @@ def main():
         else:
             print('WRONG!!, now to punish you puny mortal.')
             player_2 -= 1
-    print('You Player_2 Earned: ' + str(player_2), 'points')
-
+    print('You', player2, 'Earned: ' + str(player_2), 'points')
+    # To Compare scores and see which mortal dies
+    print(' Now which of you mortals die!')
     if player_1 > player_2:
         print('the first one wins by', player_1 - player_2,  'scores, time to end you pathetic mortal life second thing.')
+        print(player2, 'has been executed')
     elif player_1 == player_2:
         print('Well great no one gets killed they both tied, well actually lets just kill both.')
+        print(player1, ' and', player2, 'have been executed')
 
     else:
         print('The Second one won well that is not much of a surprise', player_1 - player_2, 'scores, lets just kill the first one already.')
+        print(player1, 'has been executed')
 
 
 
